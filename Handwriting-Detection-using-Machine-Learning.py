@@ -26,7 +26,7 @@ print(loss)
 model.save("digits.keras")
 
 for x in range(1, 6):
-    img = cv.imread(f'C:\\Users\\omjis\\Code\\DT Project Sem - 1\\{x}.png')[:, :, 0]
+    img = cv.imread(f'./{x}.png')[:, :, 0]
     img = cv.resize(img, (28, 28))
     img = np.invert([img])
     prediction = model.predict(img)
